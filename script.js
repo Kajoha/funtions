@@ -50,21 +50,6 @@ function imprimirError(mensaje) {
 // TERMINA EL BOILERPLATE
 
 // COMIENZA ACA
-
-function value () {
-  let message = 'error! Enter numbers in all fields';
-
-  if (input1.value  == '') {
-    return imprimirError(message);
-   }
-  else if (input2.value =='') {
-    return imprimirError(message);
-   }
-  else {
-    operation();
-  }
-}
-
 function operation() {
   const a = parseInt(input1.value);
   const b = parseInt(input2.value);
@@ -87,6 +72,20 @@ function operation() {
   }
   else {
     return imprimirError('error! selec an operation');
+  }
+}
+
+function value () {
+  let message = 'error! Enter numbers in all fields';
+
+  if (input1.value  == '') {
+    return imprimirError(message);
+   }
+  else if (input2.value =='') {
+    return imprimirError(message);
+   }
+  else {
+    operation();
   }
 }
 
